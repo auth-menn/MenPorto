@@ -1,0 +1,843 @@
+/* resources/css/app.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* header */
+
+
+                
+/* Previous existing styles */
+.animation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.ring {
+    position: absolute;
+    width: 8px;
+    height: 35px;
+    border: 3px solid transparent;
+    border-top: 8px solid #fffb00;
+    border-radius: 50%;
+    animation: rotate 3s linear infinite;
+}
+
+.ring:nth-child(2) {
+    border-top: 8px solid #ff0909;
+    animation-delay: -1s;
+}
+
+.ring:nth-child(3) {
+    border-top: 8px solid #2bff00;
+    animation-delay: -2s;
+}
+
+.ring:nth-child(4) {
+    border-top: 8px solid #fffb00;
+    animation-delay: -3s;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 50;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.bounce-icon {
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* New Arrow Hover and Fly Animations */
+.arrow-hover-effect {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover .arrow-hover-effect {
+    transform: translateY(-5px) rotate(-45deg);
+    color: #4fd1c5; /* Teal color for hover effect */
+}
+
+.arrow-fly-animation {
+    animation: flyUp 0.5s ease-out forwards;
+}
+
+@keyframes flyUp {
+    0% { 
+        transform: translateY(0) rotate(0deg);
+    }
+    50% { 
+        transform: translateY(-20px) rotate(-90deg);
+    }
+    100% { 
+        transform: translateY(-40px) rotate(-180deg);
+        opacity: 0.5;
+    }
+}
+
+/* Previous existing animations */
+.arrow-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.cta-button:hover .arrow-icon {
+    transform: rotate(-180deg);
+}
+
+.cta-button:active .arrow-icon {
+    transform: rotate(-180deg) translateY(-30px);
+}
+
+button:active .arrow-icon {
+    animation: roll 0.5s ease-in-out;
+}
+
+@keyframes roll {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+button:active #ripple {
+    transform: scale(4);
+    opacity: 0;
+}
+
+.icon-circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: circle-animation 0.5s ease-out forwards;
+    pointer-events: none;
+    opacity: 0;
+}
+
+@keyframes circle-animation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.fly-up {
+    animation: fly-up 1s ease-out forwards;
+}
+
+@keyframes fly-up {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}
+
+
+/* hero */
+
+/* Mesh pattern with animation */
+.mesh-pattern {
+    background-image: linear-gradient(45deg, rgba(96, 165, 250, 0.1) 25%, transparent 25%),
+                      linear-gradient(-45deg, rgba(96, 165, 250, 0.1) 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, rgba(96, 165, 250, 0.1) 75%),
+                      linear-gradient(-45deg, transparent 75%, rgba(96, 165, 250, 0.1) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    animation: meshGlow 3s ease-in-out infinite;
+}
+
+@keyframes meshGlow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.3; }
+}
+
+/* Bounce animation for icon */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.bounce-icon {
+    animation: bounce 1.5s infinite;
+}
+
+/* Button styling */
+.cta-button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid rgba(96, 165, 250, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.cta-button:hover {
+    border-color: #60a5fa;
+    background: rgba(96, 165, 250, 0.1);
+}
+
+.cta-button:active {
+    transform: scale(0.95);
+}
+
+/* Positioning classes */
+.title-right {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+
+.subtitle-left {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.btn-container {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .title-right {
+        position: relative;
+        top: 0;
+        right: 0;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .subtitle-left {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+        margin-top: 0.25rem;
+    }
+    
+    img {
+        margin-top: -2rem;
+        max-width: 80%;
+        margin-bottom: 2.5rem;
+    }
+    
+    .btn-container {
+        bottom: 1%; 
+    }
+}
+
+/*about*/
+
+@media (max-width: 768px) {
+    .terminal-box {
+        position: absolute;
+        bottom: 10px;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(17, 24, 39, 0.9);
+        z-index: 10;
+    }
+    .group img {
+        margin-top: 100px;
+    }
+  
+}
+ 
+@keyframes slideRight {
+    0% { transform: translateX(-10px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+.animate-slide-right {
+    animation: slideRight 1s ease-in-out infinite alternate;
+}
+
+/* Add these new styles */
+.mesh-pattern {
+    background-image: 
+        linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at center, rgba(96, 165, 250, 0.2) 0%, transparent 50%);
+    background-size: 20px 20px, 20px 20px, 100% 100%;
+    mask-image: linear-gradient(to bottom right, 
+        transparent 0%, 
+        black 20%, 
+        black 80%, 
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(to bottom right, 
+        transparent 0%, 
+        black 20%, 
+        black 80%, 
+        transparent 100%
+    );
+    filter: blur(1px);
+    z-index: 0;
+    margin: -10px;
+    padding: 10px;
+}
+
+@keyframes mesh-glow {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+.animate-mesh-glow {
+    animation: mesh-glow 4s ease-in-out infinite;
+}
+
+/* Modify existing drop-shadow */
+.drop-shadow-lg {
+    filter: drop-shadow(0px 4px 15px rgba(96, 165, 250, 0.2));
+}
+
+/* Add press animation */
+.group-active img {
+    transform: scale(0.98) translateY(2px);
+    filter: drop-shadow(0px 4px 20px rgba(96, 165, 250, 0.5)) brightness(1.05);
+}
+
+/* Add hover effect */
+.group:hover .mesh-pattern {
+    background-size: 15px 15px, 15px 15px, 100% 100%;
+    transition: background-size 0.3s ease;
+}
+
+/* Efek bayangan dan neon */
+.drop-shadow-lg {
+    filter: drop-shadow(0px 4px 10px rgba(255, 255, 255, 0.3));
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.typing-line {
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    position: relative;
+    animation: fadeIn 0.1s forwards;
+}
+
+.cursor {
+    content: '';
+    position: absolute;
+    right: 0; /* Position cursor at the end of the text */
+    top: 0;
+    height: 1em; /* Adjust to match the font size */
+    width: 2px; /* Width of the cursor */
+    background-color: white; /* Cursor color */
+    animation: blink 0.7s infinite; /* Cursor blinking effect */
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+
+
+/*eksperience*/
+
+.container-eksperience {
+    width: 100%;
+    max-width: 1390px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Scroll hanya untuk mobile */
+@media (max-width: 768px) {
+    .horizontal-scroll-container-eksperience {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 20px 0;
+    }
+}
+.horizontal-scroll-container-eksperience {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+    position: relative;
+}
+
+.scroll-content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.scrollbar-blue::-webkit-scrollbar {
+    width: 6px;
+    height: 3px;
+}
+
+.scrollbar-blue::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollbar-blue::-webkit-scrollbar-thumb {
+    background-color: #3b82f6;
+    border-radius: 2px;
+}
+
+.scrollbar-blue::-webkit-scrollbar-thumb:hover {
+    background-color: #2563eb;
+}
+
+
+/*journey*/
+   
+    /* Custom Scrollbar for WebKit browsers */
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:horizontal {
+        background-color: #3b82f6;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+    }
+
+    /* Container styles */
+    .container-testi {
+        position: relative;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Journey wrapper for responsive behavior */
+    .journey-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 30px 10px;
+        position: relative;
+        width: 100%;
+    }
+
+    /* Desktop view */
+    @media (min-width: 1024px) {
+        .container-testi {
+            width: 1430px;
+            overflow-x: auto;
+            padding: 30px;
+        }
+        
+        .journey-wrapper {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            white-space: nowrap;
+            width: auto;
+        }
+    }
+    
+    /* Tablet and mobile views */
+    @media (max-width: 1023px) {
+        .container-testi {
+            overflow-x: auto;
+            overflow-y: visible;
+            padding: 0 10px;
+        }
+        
+        .journey-wrapper {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-left: 10px;
+            margin-left: 0;
+            width: max-content;
+        }
+    }
+
+    /* Card Styles */
+    .card {
+        position: relative;
+        width: 300px;
+        height: 215px;
+        margin: 30px 10px;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s ease-in-out;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        white-space: normal;
+    }
+
+    .card:hover {
+        height: 320px;
+        background: rgba(36, 36, 36, 0.1);
+    }
+
+    .image {
+        position: relative;
+        width: 260px;
+        height: 260px;
+        top: -25%;
+        left: 8px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .image img {
+        max-width: 100%;
+        border-radius: 15px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content {
+        position: relative;
+        top: -120px;
+        padding: 20px 15px;
+        color: #fff;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    .card:hover .content {
+        margin-top: 30px;
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0.2s;
+    }
+
+    /* Responsive adjustments for tablet */
+    @media (max-width: 768px) {
+        .container-testi {
+            margin-top: 8rem;
+        }
+        
+        .card {
+            width: 250px;
+            margin: 30px 5px;
+        }
+        
+        .image {
+            width: 220px;
+        }
+    }
+
+    /* Responsive adjustments for mobile */
+    @media (max-width: 480px) {
+        /* Move content down on mobile */
+        #testi {
+            padding-top: 30px;
+        }
+        
+        .container-testi {
+            margin-top: 9rem;
+        }
+        
+        .card {
+            width: 220px;
+            margin: 40px 5px 30px 5px; /* Increased top margin */
+        }
+        
+        .image {
+            width: 190px;
+            top: -20%; /* Adjusted to be less negative */
+        }
+        
+        .content {
+            top: -100px; /* Adjusted to be less negative */
+        }
+    }
+
+
+/*skils*/
+
+:root {
+    --marquee-width: 90vw;
+    --marquee-height: 25vh;
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --marquee-width: 95vw;
+        --marquee-height: 22vh;
+        --marquee-elements-displayed: 3;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --marquee-width: 98vw;
+        --marquee-height: 20vh;
+        --marquee-elements-displayed: 2;
+    }
+}
+
+/* Marquee Styling */
+.marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Efek bayangan kiri dan kanan */
+.marquee-overlay {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+    background: linear-gradient(to right, hsl(221, 95%, 15%) 0%, transparent 100%);
+}
+
+@media (max-width: 768px) {
+    .marquee-overlay {
+        width: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .marquee-overlay {
+        width: 5rem;
+    }
+}
+
+.marquee-overlay.right {
+    right: 0;
+    background: linear-gradient(to left, hsl(221, 95%, 15%) 0%, transparent 100%);
+}
+
+.marquee-content {
+    display: flex;
+    list-style: none;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+}
+
+.marquee-content li {
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+@media (max-width: 480px) {
+    .marquee-content li {
+        padding: 0 0.5rem;
+    }
+}
+
+/*projects*/
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.bounce-icon {
+    animation: bounce 1s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+width: 6px;
+height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: transparent;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+background-color: #3b82f6;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: transparent;
+border-radius: 10px;
+}
+
+
+/*contact dan footer*/
+
+@layer components {
+    .nav-link {
+        @apply text-gray-300 hover:text-blue-600 transition-colors duration-300;
+    }
+    .cta-button {
+        @apply bg-cyan-400/20 text-blue-600 px-8 py-3 rounded-full font-medium border border-cyan-400/30 hover:bg-cyan-400/30 transition-all duration-300;
+    }
+    .project-card {
+        @apply bg-white/5 rounded-2xl backdrop-blur-lg border border-white/10 hover:border-cyan-400/30 transition-all duration-300;
+    }
+    .skill-icon {
+        @apply w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4;
+    }
+    .form-input {
+        @apply w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:border-blue-600 transition-colors;
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 1s ease-out;
+}
+
+.glow-trigger {
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.glow-trigger:hover {
+    color: rgba(255, 255, 255, 0.8); /* Slightly change text color on hover */
+    transform: scale(1.05); /* Scale up the text slightly on hover */
+}
+
+.glow-trigger:active::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(0, 153, 255, 0.4) 0%, rgba(0, 153, 255, 0) 80%);
+    transform: translate(-50%, -50%) scale(1.2);
+    border-radius: 50%;
+    filter: blur(10px);
+    opacity: 0;
+    animation: glowEffect 0.5s ease-out;
+}
+
+@keyframes glowEffect {
+    0% { opacity: 1; transform: translate(-50%, -50%) scale(0.8); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+
+/**/
+
+
+/**/
+
+
+/**/
