@@ -106,10 +106,10 @@ $skills = [
         <div class="marquee-overlay right"></div>
     </div>
 
-    <div class="text-sm md:text-base text-center text-mono text-gray-500 
+   <div class="text-sm md:text-base text-center text-mono text-gray-500 
             mb-14 md:mb-16 
             max-w-sm sm:max-w-md md:max-w-lg lg:max-w-3xl 
-            px-4 -mt-6 md:mt-8
+            px-4 mt-8
             leading-relaxed sm:leading-loose
             tracking-tight sm:tracking-normal
             mx-auto">
