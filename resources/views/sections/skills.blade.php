@@ -133,7 +133,6 @@ $skills = [
             }
         }
         
-        // Resize handler untuk responsif
         window.addEventListener('resize', function() {
             adjustMarqueeForScreenSize();
         });
