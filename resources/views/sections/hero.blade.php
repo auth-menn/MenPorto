@@ -1,16 +1,13 @@
 <section id="home" class="min-h-screen flex items-center pt-20 relative mx-6 my-0 border border-blue-500 text-white overflow-hidden">
     <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative flex flex-col items-center">
-        <!-- Title with preserved positioning -->
         <h1 class="title-right font-serif text-5xl mt-36 md:text-7xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent animate-fade-in-up text-center md:text-right">
             Hi, I'm Men
         </h1>
         
-        <!-- Subtitle with preserved positioning -->
         <p class="subtitle-left font-serif text-xl md:text-2xl mt-1 md:mt-40 font-extrabold text-zinc-300 relative z-10 drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] text-center md:text-left">
             front end developer & UI Designer
         </p>
         
-        <!-- Image container with preserved positioning -->
         <div class="relative w-full flex items-center mt-8 md:mt-20 justify-center">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-xl mesh-pattern"></div>
             <img
