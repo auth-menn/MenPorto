@@ -78,7 +78,6 @@ $skills = [
         </p>
     </div>
 
-    <!-- Marquee Section -->
     <div class="marquee mt-8 md:mt-10">
         <div class="marquee-overlay"></div>
         <ul class="marquee-content">
