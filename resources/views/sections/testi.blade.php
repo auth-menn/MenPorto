@@ -55,7 +55,6 @@ $journeyCards = [
         </p>
     </div>
 
-    <!-- Card Container -->
     <div class="container-testi w-full mt-36 px-4">
         <div class="journey-wrapper flex gap-8 overflow-x-auto">
             <?php foreach($journeyCards as $card): ?>
