@@ -75,7 +75,6 @@ $journeyCards = [
         </div>
     </div>
 
-    <!-- Tombol scroll ke journey -->
     <button class="absolute bottom-1 right-4 cta-button hover:scale-105 transform transition flex items-center p-0.5" onclick="scrollToSkilss()">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 bounce-icon" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd" />
