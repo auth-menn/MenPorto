@@ -1,4 +1,4 @@
-<!-- resources/views/layouts/partials/footer.blade.php -->
+
 <footer class="border-t border-white/10 mt-20 py-8">
     <div class="max-w-7xl mx-auto px-4 text-center">
         <section id="contact" class="py-20 relative overflow-hidden">
