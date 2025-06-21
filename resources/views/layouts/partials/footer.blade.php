@@ -16,7 +16,6 @@
                         </ul>
                     </div>          
                     
-                    <!-- Contact Form -->
                     <div class="backdrop-blur-lg p-6 shadow-lg rounded-lg border border-blue-500">
                         <form class="space-y-6">
                             <div class="form-group">
