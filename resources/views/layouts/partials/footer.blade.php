@@ -4,7 +4,6 @@
         <section id="contact" class="py-20 relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <!-- Contact Information -->
                     <div class="backdrop-blur-lg p-6 shadow-lg rounded-lg border border-blue-500 relative">
                         <h3 class="text-xl font-semibold text-gray-400 text-left">Contact Information</h3>
                         <p class="mt-2 text-gray-600 text-left">Feel free to reach out to us through any of the platforms below.</p>
