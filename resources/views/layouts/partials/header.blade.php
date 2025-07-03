@@ -9,8 +9,6 @@
     <body class="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900">
         <div id="particles" class="fixed inset-0 z-0"></div>
         
-    
-        <!-- Glassmorphism Header -->
         <header class="fixed w-full backdrop-blur-lg bg-white/5 z-50 shadow-xl">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-20">
