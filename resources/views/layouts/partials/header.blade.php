@@ -17,7 +17,6 @@
                             <button id="theme-toggle" class="p-3 rounded-full shadow-lg z-10 relative">
                                 <i class="fas fa-moon text-cyan-300 text-xl"></i>
                             </button>
-                            <!-- Cincin animasi -->
                             <div class="ring absolute w-24 h-24 border-2 border-cyan-400 rounded-full animate-ping"></div>
                             <div class="ring absolute w-32 h-32 border-2 border-blue-400 rounded-full animate-ping delay-200"></div>
                             <div class="ring absolute w-40 h-40 border-2 border-cyan-500 rounded-full animate-ping delay-400"></div>
