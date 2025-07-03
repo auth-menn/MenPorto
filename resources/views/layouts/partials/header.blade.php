@@ -29,7 +29,6 @@
                         </a>
                         </div>
                     
-                    <!-- Desktop Menu -->
                     <div class="flex flex-1 justify-center">
                     <nav class="hidden md:flex space-x-20">
                         <a href="#home" class="nav-link text-sm font-mono hover:text-cyan-400 transition duration-300 ease-in-out">Home</a>
