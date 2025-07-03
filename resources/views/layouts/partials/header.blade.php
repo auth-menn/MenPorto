@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body class="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900">
-        <!-- Floating Particles Background -->
         <div id="particles" class="fixed inset-0 z-0"></div>
         
     
