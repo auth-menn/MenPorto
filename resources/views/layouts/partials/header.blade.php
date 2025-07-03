@@ -13,8 +13,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-20">
                     <div class="absolute left-7 top-1/2 transform -translate-y-1/2">
-                        <div class="animation-container relative flex items-center justify-center w-20 h-20">
-                            <!-- Tombol di tengah -->
+                        <div class="animation-container relative flex items-center justify-center w-20 h-20">\
                             <button id="theme-toggle" class="p-3 rounded-full shadow-lg z-10 relative">
                                 <i class="fas fa-moon text-cyan-300 text-xl"></i>
                             </button>
