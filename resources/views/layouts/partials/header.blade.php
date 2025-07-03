@@ -61,7 +61,6 @@
                         </div>
                     </div>
 
-                    <!-- Mobile Menu Button (Burger) -->
                     <div class="md:hidden absolute right-6 top-1/2 transform -translate-y-1/2">
                         <button id="menu-toggle" class="text-white text-2xl focus:outline-none transition-transform duration-300">
                             <i id="menu-icon" class="fas fa-bars transition-transform duration-300"></i>
