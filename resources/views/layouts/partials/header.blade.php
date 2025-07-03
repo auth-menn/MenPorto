@@ -42,7 +42,6 @@
                     </nav>
                 </div>
                     
-                    <!-- Tombol Download CV -->
                     <div class="hidden md:flex absolute right-16 top-1/2 transform -translate-y-1/2">
                         <div class="flex items-center">
                             <button class="cta-button relative overflow-hidden bg-blue-600 text-white font-mono font-semibold px-4 py-2 text-sm rounded-md shadow-md transition-all duration-300 hover:scale-105 hover:shadow-blue-500/50 focus:outline-none active:scale-95">
