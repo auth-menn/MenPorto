@@ -2,7 +2,6 @@
 $pageTitle = "Hobby";
 $sectionDescription = "THINGS I'VE BEEN INVOLVED IN";
 
-// Token Instagram yang kamu berikan
 $access_token = "IGAGdcfze8yPhBZAE5qdmxWejl2dWdCMFhTZAmdZAZAGRyRkRWaGUwWEhRNlZAnOHJPbUdUN29FeFBfQVU4Njc4aVN1R05sQUxJMC1xM1dQdW9GUEU5VUhONFFsck9rRzY5MHdGMEtSOXh3YTFrNFZABWkNOdjVMdm9OVUlPeE5iTVJqawZDZD";
 
 $media_ids = ["MEDIA_ID_1", "MEDIA_ID_2", "MEDIA_ID_3", "MEDIA_ID_4", "MEDIA_ID_5"];
