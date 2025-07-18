@@ -1,5 +1,4 @@
 <?php
-// Sample journey/testimonial data - you can replace this with data from your database
 $journeyCards = [
     [
         'image' => 'gambar/SMK_SG.PNG',
