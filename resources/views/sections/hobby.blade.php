@@ -37,7 +37,6 @@ foreach ($media_ids as $media_id) {
     </div>
 
     <div class="relative w-[630px] h-[450px]">
-        <!-- Card Tengah -->
         <div class="absolute w-[300px] h-[360px] bg-green-700/50 rounded-lg shadow-md overflow-hidden flex items-center justify-center" style="left: 50%; top: 30%; transform: translate(-50%, -50%);">
             <img src="<?php echo $images[0]; ?>" class="w-full h-full object-cover" alt="Instagram Image">
         </div>
