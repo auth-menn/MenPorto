@@ -19,7 +19,7 @@ foreach ($media_ids as $media_id) {
     if (isset($data['media_url'])) {
         $images[] = $data['media_url'];
     } else {
-        $images[] = "https://via.placeholder.com/300"; // Placeholder jika gambar tidak ditemukan
+        $images[] = "https://via.placeholder.com/300"; 
     }
 }
 ?>
