@@ -53,7 +53,6 @@ foreach ($media_ids as $media_id) {
             <img src="<?php echo $images[3]; ?>" class="w-full h-full object-cover" alt="Instagram Image">
         </div>
 
-        <!-- Card Kanan Bawah -->
         <div class="absolute w-[220px] h-[200px] bg-green-700/50 rounded-lg shadow-md overflow-hidden flex items-center justify-center" style="right: -13%; bottom: 20%;">
             <img src="<?php echo $images[4]; ?>" class="w-full h-full object-cover" alt="Instagram Image">
         </div>
