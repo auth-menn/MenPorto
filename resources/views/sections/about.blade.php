@@ -11,7 +11,6 @@
     </div>  
 
     <div class="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col md:flex-row items-center justify-center gap-8 relative">
-        <!-- Gambar karakter -->
         <div class="relative w-full md:w-1/2 flex items-center justify-center group order-2 md:order-1">
             <div class="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-xl mesh-pattern animate-mesh-glow"></div>
             <img 
